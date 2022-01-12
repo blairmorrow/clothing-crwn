@@ -1,6 +1,7 @@
 import React from 'react';
 
 import MenuItem from '../menu-item/menu-item.component';
+
 import './directory.styles.scss';
 
 class Directory extends React.Component {
@@ -49,14 +50,13 @@ class Directory extends React.Component {
         return (
             <div className='directory-menu'>
                 {
-                    this.state.sections.map(({title, imageUrl, size, id}) => (
-                        <MenuItem title={title} imageUrl={imageUrl} size={size} key={id} />
+                    this.state.sections.map(({id, ...otherSectionProps}) => (
+                        <MenuItem key={id} {...otherSectionProps} />
                     ))
                 }
             </div>
         );
     }
-
 }
 
 export default Directory;
