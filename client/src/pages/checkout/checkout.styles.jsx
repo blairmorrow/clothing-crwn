@@ -20,6 +20,10 @@ export const CheckoutHeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid darkgrey;
+
+    @media screen and (max-width: 800px) {
+        width: 80vw;   
+    }
 `;
 
 export const HeaderBlockContainer = styled.div`
